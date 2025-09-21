@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Omnia - Tecnologia Contábil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #0a192f;
+            --secondary: #112240;
+            --accent: #64ffda;
+            --text-primary: #e6f1ff;
+            --text-secondary: #8892b0;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--accent), #4fc3f7);
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-secondary);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--accent);
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid var(--accent);
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--secondary);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .services-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        
+        .service-card {
+            display: flex;
+            background-color: rgba(17, 34, 64, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent);
+        }
+        
+        .service-content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .service-card p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .service-features li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .service-features li:before {
+            content: '▸';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+        
+        .service-image {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            min-height: 350px;
+        }
+        
+        .service-image .image-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .service-image .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a2f4e, #2a4b8d);
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Alternar posição da imagem para cada card */
+        .service-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        /* Workflow Section */
+        .workflow {
+            padding: 80px 0;
+            background-color: var(--primary);
+        }
+        
+        .workflow-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .workflow-steps:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent), transparent);
+            z-index: 1;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            width: 30%;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-weight: bold;
+        }
+        
+        .step-content {
+            background-color: var(--secondary);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .footer-text {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .social-links li {
+            margin: 0 15px;
+        }
+        
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .service-card {
+                flex-direction: column !important;
+            }
+            
+            .service-image {
+                min-height: 250px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .workflow-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .workflow-steps:before {
+                display: none;
+            }
+            
+            .step {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            .service-content {
+                padding: 20px;
+            }
+            
+            .service-card h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Dot Omnia</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#workflow">Fluxo de Trabalho</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Tecnologia Contábil Avançada</h1>
+            <p>Automatização e eficiência para escritórios contábeis com as melhores soluções do mercado</p>
+            <a href="#services" class="btn">Conheça Nossas Soluções</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossas Soluções Tecnológicas</h2>
+            </div>
+            <div class="services-container">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Rotinas Automáticas no Domínio Sistemas</h3>
+                        <p>Automatização completa de processos contábeis com o sistema Domínio da Thomson Reuters</p>
+                        <ul class="service-features">
+                            <li>Importação automática de documentos fiscais (NF-e, NFS-e, NFC-e, CT-e)</li>
+                            <li>Emissão programada de guias de impostos (DAS - Simples Nacional)</li>
+                            <li>Agendamento de envio de eventos do eSocial</li>
+                            <li>Integração por API com sistemas de terceiros</li>
+                            <li>Automação de processos fiscais e contábeis</li>
+                        </ul>
+                    </div>
+                    <div class="service-image">
+                        <div class="image-container">
+                            <!-- Substitua pelo caminho da sua imagem -->
+                           <!--  <div class="placeholder">Imagem de Rotinas Automáticas<br>(600x400px)</div>-->
+                             <img src="img/dominio_rotina.png" alt="Automação Contábil com N8N"> 
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Automação Contábil com N8N</h3>
+                        <p>Fluxos de trabalho automatizados para otimizar processos contábeis</p>
+                        <ul class="service-features">
+                            <li>Alertas automáticos de vencimentos contábeis</li>
+                            <li>Comunicação automatizada com clientes via e-mail</li>
+                            <li>Notificações para colaboradores sobre prazos importantes</li>
+                            <li>Integração com Sistema Domínio para agendamento de rotinas</li>
+                            <li>Redução de erros manuais e atrasos nos processos</li>
+                        </ul>
+                    </div>
+                    <div class="service-image">
+                        <div class="image-container">
+                            <!-- Substitua pelo caminho da sua imagem -->
+                            <!-- <div class="placeholder">Imagem de Automação N8N<br>(600x400px)</div> -->
+                           <img src="img/n8n_contabil.jpg" alt="Automação Contábil com N8N"> 
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Sistemas de Auxílio à Contabilidade</h3>
+                        <p>Soluções integradas para gestão eficiente do dia a dia contábil</p>
+                        <ul class="service-features">
+                            <li>Indicação de sistemas especializados para contabilidade</li>
+                            <li>Redução de erros de lançamento e multas</li>
+                            <li>Dashboard unificado para gestão à vista</li>
+                            <li>Integração de múltiplos sistemas em uma única plataforma</li>
+                            <li>Relatórios personalizados para análise de desempenho</li>
+                        </ul>
+                    </div>
+                    <div class="service-image">
+                        <div class="image-container">
+                            <!-- Substitua pelo caminho da sua imagem -->
+                            <!-- <div class="placeholder">Imagem de Sistemas Contábeis<br>(600x400px)</div> -->
+                           <img src="img/Contabeis.png" alt="Sistemas de Auxílio à Contabilidade"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="workflow" id="workflow">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fluxo de Trabalho Eficiente</h2>
+            </div>
+            <div class="workflow-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Análise de Processos</h3>
+                        <p>Identificamos as rotinas contábeis passíveis de automação no seu escritório</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Implementação</h3>
+                        <p>Configuramos as soluções tecnológicas adequadas para suas necessidades</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Gestão Contínua</h3>
+                        <p>Monitoramos e ajustamos os sistemas para máxima eficiência</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-logo">Dot Omnia</div>
+            <p class="footer-text">Especialistas em tecnologia contábil com foco em automação, eficiência e redução de erros para escritórios de contabilidade.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+            <p class="copyright">© 2023 Dot Omnia - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
