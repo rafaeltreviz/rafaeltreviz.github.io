@@ -70,16 +70,17 @@
                 <a href="#home" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">Sobre</a>
                 <a href="#skill" class="nav-item nav-link">Skills</a>
-                <a href="#service" class="nav-item nav-link">Serviços</a>
+                
                 <!-- <a href="/ks.html" class="nav-item nav-link">KS - Contabilidade</a> -->
             </div>
             <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
                 <h1 class="text-primary fw-bold m-0">Portfólio</h1>
             </a>
             <div class="navbar-nav me-auto py-0">
+                <a href="#service" class="nav-item nav-link">Serviços</a>
                 <a href="#project" class="nav-item nav-link">Projetos</a>
                 <!-- <a href="#team" class="nav-item nav-link">Team</a> -->
-                <a href="#testimonial" class="nav-item nav-link">Certificações</a>
+                <!-- <a href="#testimonial" class="nav-item nav-link">Certificações</a> -->
                 <a href="#contact" class="nav-item nav-link">Contato</a>
             </div>
         </div>
@@ -97,7 +98,7 @@
                     <h2 class="typed-text-output d-inline"></h2>
                     <div class="typed-text d-none">Analista de Dados, Estratégia em dados, Micro-Saas, Gerencia de Sistemas</div>
                     <div class="d-flex align-items-center pt-5">
-                        <!-- <a href="" class="btn btn-primary py-3 px-4 me-5">Download CV</a> -->
+                        <a href="img/Currículo - Rafael_Trevizani.pdf" class="btn btn-primary py-3 px-4 me-5">Download CV</a> 
                         <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
@@ -256,7 +257,7 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
                         <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Educação (atualizados)</button>
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Educação (recentes)</button>
                         </li>
                         <li class="nav-item w-50">
                             <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Trabalhos em andamento</button>
@@ -453,7 +454,8 @@
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/portfolio_3.png" alt="">
                         <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="#" data-bs-toggle="modal" data-bs-target="#modal_project3">
+                                   <i class="fa fa-eye"></i>
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
                         </div>
                     </div>
@@ -462,7 +464,10 @@
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/portfolio_4.png" alt="">
                         <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <!-- Botão para acionar o modal -->
+                               <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="#" data-bs-toggle="modal" data-bs-target="#modal_project4">
+                                   <i class="fa fa-eye"></i>
+                               </a>
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
                         </div>
                     </div>
@@ -471,12 +476,15 @@
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/portfolio_5.png" alt="">
                         <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <!-- Botão para acionar o modal -->
+                               <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="#" data-bs-toggle="modal" data-bs-target="#modal_project5">
+                                   <i class="fa fa-eye"></i>
+                               </a>
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
+                <!-- <div class="col-lg-4 col-md-6 portfolio-item second">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/portfolio_6.png" alt="">
                         <div class="portfolio-btn">
@@ -484,7 +492,7 @@
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -838,6 +846,242 @@
                                     </div>
                                 </div>
                                 <!-- Modal Project 2 end-->
+
+
+                            <!-- Modal Project 3 -->
+                                <div class="modal fade" id="modal_project3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                       <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Integração de Sistemas: Athenas Contábil <> Fucape Solutions OTIMA</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <!-- Texto -->
+                                                    <div>
+                                                        <!-- Título da seção -->
+                                                        <h6 class="fw-bold mb-3">Desafio</h6>
+                                                        <p class="text-muted">
+                                                            Automatizar e sincronizar o fluxo de dados entre dois sistemas corporativos locais – o Athenas Contábil (gestão de clientes/alunos) e o OTIMA (gestão de tarefas financeiras) – eliminando o trabalho manual e garantindo precisão no início dos processos.
+                                                        </p>
+
+                                                        <!-- Título da seção -->
+                                                        <h6 class="fw-bold mt-4 mb-3">Solução Implementada</h6>
+                                                        <p class="text-muted">
+                                                            Desenvolvi e implantei uma <strong>API REST personalizada utilizando Django REST Framework</strong>, criando um canal de comunicação eficiente e seguro entre as plataformas. A cada novo cadastro de aluno ou cliente no sistema Athenas, a API é acionada automaticamente e <strong>dispara a criação de uma tarefa correspondente no sistema OTIMA</strong>, iniciando a fase pré-determinada do processo financeiro de forma imediata e padronizada.
+                                                        </p>
+
+                                                        <!-- Título da seção -->
+                                                        <h6 class="fw-bold mt-4 mb-3">Implementação e Infraestrutura</h6>
+                                                        <ul class="text-muted">
+                                                            <li><strong>Back-end:</strong> API desenvolvida com Django REST Framework para alta confiabilidade e manutenibilidade.</li>
+                                                            <li><strong>Integração:</strong> Lógica de sincronização em tempo real, garantindo transferência consistente e segura de dados.</li>
+                                                            <li><strong>Deploy e Automação:</strong> Implantação em servidor Linux CENTOS, utilizando a infraestrutura local. Configurei processos automatizados para realizar as chamadas de dados e garantir operação contínua.</li>
+                                                        </ul>
+
+                                                        <!-- Título da seção -->
+                                                        <h6 class="fw-bold mt-4 mb-3">Resultados e Impactos Gerados</h6>
+                                                        <ul class="text-muted">
+                                                            <li><strong>Eliminação de processos manuais:</strong> Fim da necessidade de inserção manual de tarefas no sistema OTIMA.</li>
+                                                            <li><strong>Redução de erros:</strong> Diminuição significativa de inconsistências nos processos financeiros iniciais.</li>
+                                                            <li><strong>Aceleração de processos:</strong> Início imediato das fases financeiras após cadastro, otimizando o fluxo operacional.</li>
+                                                            <li><strong>Maior eficiência:</strong> Permitiu que a equipe financeira focasse em atividades de maior valor agregado.</li>
+                                                            <li><strong>Padronização:</strong> Garantia de que todos os novos clientes/alunos seguiam o mesmo processo pré-determinado.</li>
+                                                        </ul>
+
+                                                        <!-- Título da seção -->
+                                                        <h6 class="fw-bold mt-4 mb-3">Tecnologias Utilizadas</h6>
+                                                        <ul class="text-muted">
+                                                            <li>Python</li>
+                                                            <li>Django REST Framework</li>
+                                                            <li>API REST</li>
+                                                            <li>Linux CENTOS</li>
+                                                            <li>Automação de Processos</li>
+                                                            <li>Integração de Sistemas</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <!-- GIF abaixo do texto (comentado) -->
+                                                    <!--
+                                                    <div class="mt-4 text-center">
+                                                        <img src="img/Dasboard.gif" alt="GIF explicativo" class="img-fluid">
+                                                    </div>
+                                                    -->
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                </div>
+                                            </div>
+                                                                                </div>
+                                                                            </div>
+                            <!-- Modal Project 3 end-->
+
+                             <!-- Modal Project 4 -->
+                                <div class="modal fade" id="modal_project4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                       <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Desenvolvimento de Relatórios Gerenciais Contábeis - Domínio Sistemas</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <!-- Texto -->
+                                                        <div>
+                                                            <!-- Título da seção -->
+                                                            <h6 class="fw-bold mb-3">Desafio</h6>
+                                                            <p class="text-muted">
+                                                                Atender às necessidades de informação gerencial dos departamentos Contábil, Fiscal e de Pessoal, substituindo processos manuais e planilhas descentralizadas por relatórios confiáveis e automatizados extraídos diretamente do sistema empresarial.
+                                                            </p>
+
+                                                            <!-- Título da seção -->
+                                                            <h6 class="fw-bold mt-4 mb-3">Solução Implementada</h6>
+                                                            <p class="text-muted">
+                                                                Utilizei o módulo <strong>Gerador de Relatórios</strong> do sistema Domínio, trabalhando diretamente com <strong>SQL no banco de dados SAP SQL Anywhere</strong> para desenvolver um conjunto completo de relatórios gerenciais contábeis. Criei consultas otimizadas que transformaram dados operacionais em informações estratégicas para tomada de decisão.
+                                                            </p>
+
+                                                            <!-- Título da seção -->
+                                                            <h6 class="fw-bold mt-4 mb-3">Principais Relatórios Desenvolvidos</h6>
+                                                            <ul class="text-muted">
+                                                                <li><strong>Controle de Faturamento por Regime Tributário:</strong> Visão detalhada da receita categorizada por Lucro Real, Lucro Presumido e Simples Nacional, essencial para planejamento fiscal.</li>
+                                                                <li><strong>Total de INSS + FGTS a Pagar por Fechamento:</strong> Relatório consolidado para o departamento Pessoal, proporcionando precisão no provisionamento das obrigações trabalhistas.</li>
+                                                                <li><strong>Controle de Substituição Tributária por Lote:</strong> Monitoramento específico dos lançamentos contábeis envolvendo ST, aumentando a confiabilidade nas informações fiscais.</li>
+                                                                <li>Diversos outros relatórios personalizados para análise de custos, conciliação bancária e posicionamento contábil.</li>
+                                                            </ul>
+
+                                                            <!-- Título da seção -->
+                                                            <h6 class="fw-bold mt-4 mb-3">Mapeamento e Documentação Técnica</h6>
+                                                            <p class="text-muted">
+                                                                Para garantir a sustentabilidade e o conhecimento do ambiente, realizei um trabalho completo de engenharia reversa e documentação:
+                                                            </p>
+                                                            <ul class="text-muted">
+                                                                <li><strong>Mapeamento Completo do Banco de Dados:</strong> Documentei as tabelas, relações e campos críticos dos módulos <strong>Fiscal, Pessoal e Contábil</strong> do sistema Domínio.</li>
+                                                                <li><strong>Documentação das Queries:</strong> Todas as SQLs desenvolvidas foram detalhadamente documentadas, incluindo objetivo, lógica de negócio, tabelas envolvidas e instruções de uso, criando um repositório de conhecimento técnico.</li>
+                                                            </ul>
+
+                                                            <!-- Título da seção -->
+                                                            <h6 class="fw-bold mt-4 mb-3">Resultados e Impactos Gerados</h6>
+                                                            <ul class="text-muted">
+                                                                <li><strong>Automação de Processos:</strong> Eliminação da coleta manual de dados e consolidação via planilhas, reduzindo erros e retrabalho.</li>
+                                                                <li><strong>Confiabilidade das Informações:</strong> Dados gerados diretamente da fonte operacional, garantindo consistência e precisão nos relatórios contábeis.</li>
+                                                                <li><strong>Agilidade na Tomada de Decisão:</strong> Acesso rápido a informações fiscais e gerenciais críticas para o fechamento mensal e planejamento.</li>
+                                                                <li><strong>Base de Conhecimento Sustentável:</strong> Documentação técnica que permitiu a outros colaboradores dar manutenção e criar novos relatórios, escalando a capacidade da equipe.</li>
+                                                                <li><strong>Visibilidade Gerencial Aprimorada:</strong> Os gestores passaram a contar com painéis confiáveis para monitorar o faturamento, obrigações trabalhistas e questões tributárias.</li>
+                                                            </ul>
+
+                                                            <!-- Título da seção -->
+                                                            <h6 class="fw-bold mt-4 mb-3">Tecnologias e Competências Utilizadas</h6>
+                                                            <ul class="text-muted">
+                                                                <li>SAP SQL Anywhere</li>
+                                                                <li>Linguagem SQL Avançada</li>
+                                                                <li>Módulo Gerador de Relatórios (Domínio Sistemas)</li>
+                                                                <li>Engenharia Reversa de Bancos de Dados</li>
+                                                                <li>Documentação Técnica</li>
+                                                                <li>Contabilidade, Fiscal e Departamento Pessoal (Conhecimento do Negócio)</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <!-- GIF abaixo do texto (comentado) -->
+                                                        <!--
+                                                        <div class="mt-4 text-center">
+                                                            <img src="img/Dasboard.gif" alt="GIF explicativo" class="img-fluid">
+                                                        </div>
+                                                        -->
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                    </div>
+                                                </div>
+                                             </div>
+                                         </div>
+                            <!-- Modal Project 4 end-->
+
+                           <!-- Modal Project 5 -->
+                                <div class="modal fade" id="modal_project5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                     <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Gerente de Sistemas - Gestão de Sistemas Sankhya/Domínio Contábil</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Texto -->
+                                                <div>
+                                                    <!-- Título da seção -->
+                                                    <h6 class="fw-bold mb-3">Desafio e Contexto</h6>
+                                                    <p class="text-muted">
+                                                        Gerenciar a interface entre as necessidades operacionais contábeis/gerenciais da empresa e os sistemas corporativos Sankhya e Domínio Contábil, garantindo que as ferramentas suportassem eficientemente os processos críticos do negócio, desde operações diárias até cálculos complexos.
+                                                    </p>
+
+                                                    <!-- Título da seção -->
+                                                    <h6 class="fw-bold mt-4 mb-3">Atuação Estratégica e de Melhoria Contínua</h6>
+                                                    <p class="text-muted">
+                                                        Como Gerente de Sistemas, atuei como elo central entre a gerência operacional, a equipe contábil e os fornecedores dos sistemas. Minha responsabilidade principal era traduzir necessidades de negócio em melhorias técnicas, priorizando demandas e garantindo a evolução constante dos sistemas.
+                                                    </p>
+                                                    <ul class="text-muted">
+                                                        <li><strong>Negociação e Priorização:</strong> Mediação com a gerência para identificar e definir melhorias, como novos relatórios e funcionalidades, alinhando-as às estratégias da empresa.</li>
+                                                        <li><strong>Gestão do Ciclo de Desenvolvimento:</strong> Definição de prioridades para a equipe de desenvolvimento dos fornecedores (Sankhya/Domínio), acompanhando a implementação de atualizações e correções.</li>
+                                                        <li><strong>Suporte Especializado:</strong> Acompanhamento e resolução de suportes avançados, esclarecendo dúvidas complexas nas áreas contábil e gerencial para garantir o uso correto e máximo dos sistemas.</li>
+                                                        <li><strong>Implantação de Módulos:</strong> Liderança no acompanhamento e execução de pontos críticos durante a implantação de novos módulos, assegurando integração completa e funcionamento adequado.</li>
+                                                    </ul>
+
+                                                    <!-- Título da seção -->
+                                                    <h6 class="fw-bold mt-4 mb-3">Gestão Técnica e de Infraestrutura</h6>
+                                                    <p class="text-muted">
+                                                        Responsável pela saúde, performance e confiabilidade dos sistemas em ambiente local, executando manutenções proativas no banco de dados e na infraestrutura.
+                                                    </p>
+                                                    <ul class="text-muted">
+                                                        <li><strong>Otimização de Banco de Dados:</strong> Execução regular de manutenção nos bancos de dados dos sistemas, incluindo reindexação, defragmentação de tabelas e organização de logs.</li>
+                                                        <li><strong>Melhoria de Performance:</strong> Aplicação de ajustes que resultaram na melhoria significativa do tempo de resposta do sistema para cálculos contábeis extensos e processos batch.</li>
+                                                        <li><strong>Confiabilidade do Sistema:</strong> Garantia da estabilidade e disponibilidade dos ambientes, essenciais para os fechamentos contábeis e fiscais.</li>
+                                                    </ul>
+
+                                                    <!-- Título da seção -->
+                                                    <h6 class="fw-bold mt-4 mb-3">Governança e Comunicação</h6>
+                                                    <ul class="text-muted">
+                                                        <li><strong>Reuniões de Alinhamento Mensal:</strong> Condução de reuniões com a equipe gerencial para apresentar o andamento do cronograma, destacar pontos executados e levantar pontos críticos a serem resolvidos ou implantados.</li>
+                                                        <li><strong>Planejamento e Previsibilidade:</strong> Tradução de demandas em cronogramas factíveis, gerenciando expectativas e comunicando progressos e obstáculos de forma transparente.</li>
+                                                    </ul>
+
+                                                    <!-- Título da seção -->
+                                                    <h6 class="fw-bold mt-4 mb-3">Resultados e Impactos Gerados</h6>
+                                                    <ul class="text-muted">
+                                                        <li><strong>Sistemas Alinhados ao Negócio:</strong> Os sistemas evoluiram continuamente para atender às necessidades reais da contabilidade e gestão, tornando-se ferramentas estratégicas.</li>
+                                                        <li><strong>Performance Otimizada:</strong> Aumento da eficiência operacional através da melhoria no tempo de resposta dos sistemas, impactando diretamente a produtividade das equipes.</li>
+                                                        <li><strong>Implantações Bem-Sucedidas:</strong> Redução de riscos e garantia de sucesso na implantação de novos módulos, com foco na resolução de pontos críticos.</li>
+                                                        <li><strong>Comunicação Efetiva:</strong> Estabelecimento de um canal claro e produtivo entre usuários, gerência e fornecedores, eliminando ruídos e acelerando a solução de problemas.</li>
+                                                        <li><strong>Proatividade Técnica:</strong> Manutenção preventiva que garantiu alta disponibilidade e confiabilidade dos sistemas, especialmente em períodos de fechamento.</li>
+                                                    </ul>
+
+                                                    <!-- Título da seção -->
+                                                    <h6 class="fw-bold mt-4 mb-3">Competências e Tecnologias</h6>
+                                                    <ul class="text-muted">
+                                                        <li>Gestão de Sistemas ERP (Sankhya, Domínio Contábil)</li>
+                                                        <li>Gestão de Projetos e Melhoria Contínua</li>
+                                                        <li>Otimização de Banco de Dados (Índices, Defragmentação)</li>
+                                                        <li>Suporte Técnico Avançado (Contábil/Gerencial)</li>
+                                                        <li>Implantação de Módulos de Software</li>
+                                                        <li>Comunicação e Negociação com Stakeholders</li>
+                                                        <li>Gestão de Infraestrutura Local</li>
+                                                    </ul>
+                                                </div>
+
+                                                <!-- GIF abaixo do texto (comentado) -->
+                                                <!--
+                                                <div class="mt-4 text-center">
+                                                    <img src="img/Dasboard.gif" alt="GIF explicativo" class="img-fluid">
+                                                </div>
+                                                -->
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                             </div>
+                            <!-- Modal Project 4 end-->
+
+                    
              
             
    
