@@ -1,9 +1,12 @@
 /********** Template CSS **********/
 :root {
-    --primary: #6244C5;
-    --secondary: #FFC448;
-    --light: #FAFAFB;
-    --dark: #12141D;
+    --primary: #3B82F6;
+    --secondary: #60A5FA;
+    --light: #E5E7EB;
+    --dark: #0F172A;
+    --bg-dark: #1E293B;
+    --text-light: #F1F5F9;
+    --text-muted: #CBD5E1;
 }
 
 .back-to-top {
@@ -85,7 +88,7 @@
 
 .navbar .navbar-nav .nav-link {
     padding: 20px 15px;
-    color: var(--dark);
+    color: var(--text-light);
     font-size: 18px;
     font-weight: 600;
     outline: none;
@@ -111,7 +114,7 @@
 
 .typed-cursor {
     font-size: 30px;
-    color: var(--dark);
+    color: var(--primary);
 }
 
 .btn-play {
@@ -232,11 +235,13 @@
 }
 
 #skill .nav-pills .nav-link {
-    color: var(--dark);
+    color: var(--text-muted);
+    background-color: transparent;
 }
 
 #skill .nav-pills .nav-link.active {
     color: #FFFFFF;
+    background-color: var(--primary);
 }
 
 #skill .tab-content hr {
@@ -260,7 +265,7 @@
 #portfolio-flters li {
     display: inline-block;
     font-weight: 500;
-    color: var(--dark);
+    color: var(--text-light);
     cursor: pointer;
     transition: .5s;
     border-bottom: 2px solid transparent;
@@ -270,6 +275,108 @@
 #portfolio-flters li.active {
     color: var(--primary);
     border-color: var(--primary);
+}
+
+.project-carousel-wrapper {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 20px 45px rgba(2, 8, 23, 0.35);
+}
+
+.project-carousel .carousel-item {
+    padding: 10px 0;
+}
+
+.project-slide {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+    border-radius: 18px;
+    padding: 24px;
+    min-height: 420px;
+}
+
+.project-slide img {
+    border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.project-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(96, 165, 250, 0.15);
+    color: #93C5FD;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.project-slide h3 {
+    color: #F8FAFC;
+}
+
+.project-slide p,
+.project-slide li {
+    color: #CBD5E1;
+}
+
+.project-highlights {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.project-highlights li + li {
+    margin-top: 8px;
+}
+
+.project-carousel .carousel-control-prev,
+.project-carousel .carousel-control-next {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(96, 165, 250, 0.15);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.project-carousel .carousel-control-prev {
+    left: -12px;
+}
+
+.project-carousel .carousel-control-next {
+    right: -12px;
+}
+
+.project-carousel .carousel-control-prev-icon,
+.project-carousel .carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+}
+
+.project-carousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #60A5FA;
+}
+
+@media (max-width: 767.98px) {
+    .project-carousel-wrapper {
+        padding: 16px;
+    }
+
+    .project-slide {
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .project-carousel .carousel-control-prev,
+    .project-carousel .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .portfolio-img {
@@ -282,7 +389,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(98, 68, 197, .9);
+    background: rgba(59, 130, 246, 0.95);
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
@@ -388,9 +495,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
+    background: var(--primary);
     border: 1px solid var(--secondary);
     border-radius: 60px;
+    color: #FFFFFF;
 }
 
 .testimonial-carousel .owl-dots {
@@ -407,7 +515,7 @@
     margin: 0 5px;
     width: 30px;
     height: 30px;
-    background: #FFFFFF;
+    background: var(--bg-dark);
     border: 2px solid var(--secondary);
     border-radius: 30px;
     transition: .5s;
