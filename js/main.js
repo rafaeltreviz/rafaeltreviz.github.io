@@ -32,7 +32,7 @@
             event.preventDefault();
             
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
+                scrollTop: $(this.hash).offset().top - ($('body').hasClass('has-language-toggle') ? 119 : 45)
             }, 1500, 'easeInOutExpo');
             
             if ($(this).parents('.navbar-nav').length) {
@@ -58,9 +58,12 @@
     
 
     // Typed Initiate
-    if ($('.typed-text-output').length == 1) {
+    var typed;
+    function refreshTypedText() {
+        if (typed) typed.destroy();
+        if ($('.typed-text-output').length != 1) return;
         var typed_strings = $('.typed-text').text();
-        var typed = new Typed('.typed-text-output', {
+        typed = new Typed('.typed-text-output', {
             strings: typed_strings.split(', '),
             typeSpeed: 100,
             backSpeed: 20,
@@ -68,6 +71,11 @@
             loop: true
         });
     }
+    refreshTypedText();
+    document.addEventListener('languagechange', function () {
+        refreshTypedText();
+        $('.portfolio-container').isotope('layout');
+    });
 
 
     // Modal Video

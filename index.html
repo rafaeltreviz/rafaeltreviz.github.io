@@ -105,11 +105,21 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-54X7XHRS');</script>
-    <!-- End Google Tag Manager TESTE ->
+    <!-- End Google Tag Manager TESTE -->
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+<body class="has-language-toggle" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="119">
+    <div class="language-toolbar">
+        <fieldset class="language-toggle">
+            <legend class="visually-hidden" id="language-label">Idioma do site</legend>
+            <input type="radio" name="language" id="language-pt" value="pt-BR" checked>
+            <label for="language-pt" lang="pt-BR" aria-label="Português (PT-BR)"><img class="language-flag" src="img/flag-br.svg" alt="" aria-hidden="true"><span>PT-BR</span></label>
+            <input type="radio" name="language" id="language-en" value="en">
+            <label for="language-en" lang="en" aria-label="English (EN)"><img class="language-flag" src="img/flag-us.svg" alt="" aria-hidden="true"><span>EN</span></label>
+            <span class="language-toggle-slider" aria-hidden="true"></span>
+        </fieldset>
+    </div>
     <!-- Spinner Start -->
     <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style="background-color: #0F172A;">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -761,25 +771,25 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="name" placeholder="Seu Nome">
                                     <label for="name">Seu Nome</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
                                     <label for="email">E-mail</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" id="subject" placeholder="Título">
                                     <label for="subject">Título</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control" placeholder="Mensagem" id="message" style="height: 100px"></textarea>
                                     <label for="message">Mensagem</label>
                                 </div>
                             </div>
@@ -1212,6 +1222,8 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
     <script src="js/main.js"></script>
 </body>
 
